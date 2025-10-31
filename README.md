@@ -1,73 +1,99 @@
-# React + TypeScript + Vite
+ Página de Login Interativo com React
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Uma aplicação web de **autenticação e acesso** com interface moderna e responsiva, desenvolvida em **React**. O projeto utiliza ícones, componentes reutilizáveis e inclui uma imagem de fundo da **Ponte JK (Brasília)** para compor uma experiência visual atrativa.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📋 Funcionalidades
 
-## React Compiler
+✅ Login com e-mail e senha
+🧠 Manipulação de estado com React Hooks (`useState`)
+🌈 Interface responsiva e estilizada com CSS
+👁️ Ícones de usuário e senha (`react-icons/fa`)
+📄 Validação simples de formulário e envio de dados simulados (alerta)
+🔒 Estrutura pronta para integração com autenticação real (Firebase, JWT, etc.)
+🖼️ Fundo personalizado com imagem da **Ponte JK**
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tecnologias Utilizadas
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+⚛️ **React** — framework principal da aplicação
+🎨 **CSS3** — estilização e responsividade
+🧩 **React Icons** — ícones de interface (usuário e senha)
+📦 **Node.js + npm/yarn** — gerenciamento de dependências e execução local
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ⚙️ Como Usar
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+Clone ou baixe este repositório:
+
+```bash
+git clone https://github.com/seu-usuario/Projeto-Login-React.git
+cd Projeto-Login-React
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+Instale as dependências:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+```bash
+npm install
+# ou
+yarn
 ```
+
+Execute o projeto localmente:
+
+```bash
+npm run dev
+# ou
+yarn dev
+```
+
+Acesse no navegador:
+
+```
+http://localhost:5173
+```
+
+---
+
+## 🖼️ Personalização da Imagem de Fundo
+
+A imagem usada como plano de fundo é a **Ponte JK - Brasília-DF**, localizada em `public/ponte-jk.jpg`.
+
+Para trocar a imagem, substitua o arquivo por outro de sua preferência ou altere o caminho no arquivo `Login.css`:
+
+```css
+.container {
+  background-image: url('/ponte-jk.jpg');
+  background-size: cover;
+  background-position: center;
+}
+```
+
+> ⚠️ Use imagens com licença livre se o projeto for público.
+
+---
+
+## 🚀 Próximos Passos
+
+* Substituir o `alert()` por notificações visuais (ex: `react-toastify`).
+* Adicionar autenticação real com Firebase ou API própria.
+* Implementar roteamento (React Router) e área logada.
+* Criar página de registro e recuperação de senha.
+
+---
+
+## 👨‍💻 Autor
+
+**Guilherme Guimarães**
+Projeto desenvolvido para fins **educacionais** e demonstração de **interfaces modernas em React**.
+
+---
+
+## 🌐 Repositório e Deploy
+
+Em breve será disponibilizado o link do repositório e (opcionalmente) a URL de deploy via Vercel, Netlify ou Firebase Hosting.
+
+---
